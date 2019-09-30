@@ -12,9 +12,8 @@ sourcedir="$PWD"
 #tar xf icu.tar.xz
 # start build
 cd swift
-utils/build-script --release --wasm \
+utils/build-script --debug --wasm \
 	--llvm-targets-to-build "X86;WebAssembly" \
-	--llvm-max-parallel-lto-link-jobs 1 --swift-tools-max-parallel-lto-link-jobs 1 \
 	--wasm-wasi-sdk "/opt/wasi-sdk" \
 	--wasm-icu-uc "todo" \
 	--wasm-icu-uc-include "$sourcedir/icu_out/include" \
